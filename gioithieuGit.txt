@@ -1,0 +1,20 @@
+I. Flow của git
+	Master->hotfix->release->developer->feature
+Đầu tiên viết code ở nhánh Feature, khi code được rồi thì đưa qua nhánh developer.
+Developer test ổn rồi thì đưa qua nhánh Release
+- Release test ổn rồi thì đưa qua nhánh Master
+- Nhánh Hotfix: Lấy code trực tiếp từ nhánh Master. Rồi sau đó đẩy lại lên nhánh Master -> Release. 
++ Hotfix cũng được chuyển code về Developer. 
++ Khi có bug phát sinh gấp ở trên sản phẩm chính, họ sẽ tạo ra nhánh Hotfix và lấy code từ nhánh Master.
++ Sau khi sửa xong đẩy về Master và đưa qua Developer. 
+
+II. Các thuật ngữ trong git
+- Git Flow: Luồng đi để quản lý source code
+- Pull Request (PR): So sánh code ở nhánh Feature với code ở nhánh Developer, nếu code ổn thì PR gửi cho leader để review
+- Merge: Đẩy code tư PR (Có thể từ Feature->Developer)
+- Release: Triển khai code lên mt khác(Test, Product,...)
+
+III. Nơi lưu trữ code
+- Github, ngoài ra (ButBucket và Backlog)
+
+

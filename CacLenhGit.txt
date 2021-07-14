@@ -1,0 +1,45 @@
+I. Cấu hình Git (Cấu hình tên và email)
+- git config --global user.name "Tên người dùng"
+- git config --global user.email "Tên email"
+=>Cái này có tác dụng biết ai đã thao tác với code
+
+II. Repository
+Mỗi một dự án đều được tạo ra 1 repositories, để lưu trữ source code trong dự án
++ Local Repository: Là repo phía local của Developer, nó được đồng bộ lên remote repo khi làm việc với git
++ Remote Repository: Là repo được lưu trữ ở git trung tâm 
+
+III. Tạo repository
+- Vào folder: git init
+
+IV. Git branch
+- Trong một dự án có nhiều task khác nhau
+- Dùng branch để phân nhánh mỗi task đó thánh một branch riêng biệt để lưu lại
+- Branch đã phân nhánh sẽ không ảnh hưởng đến branch khác
+
+V. Các lệnh git cơ bản
+1. git config: Để set name và email trong main configuration file
+2. git init: Khởi tạo một git repository trong một project mới hoặc đã có
+3. git clone: copy 1 git repository từ remote source
+	git clone [url_remote]
+4. git status: Để check những file đã thay đổi trong thư mục
+	git status
+5. git add: Thêm thay đổi trong stage/index trong thư mục
+6. git commit: Lưu lại lịch sử tên, email và chú thích
+	git commit -m "..."
+7. git push/pull: Đẩy lên remote
+8. git branch: Liệt kê tất cả các nhánh
+9. git checkout tên_nhánh: chuyển sang nhánh tên_nhánh
+	git checkout -b tên_nhánh: tạo nhánh và chuyển sang nhánh đó
+10. git merge: Merge 2 branch lại với nhau
+	git merge <bran muốn merge>
+11. git reset: Bạn đã đưa một tập tin nào đó vào stage area nhưng bây giờ bạn muốn loại bỏ nó ra để không phải commit theo
+12. git add: Đưa một tập tin vào staging area 
+	git add tebfile, git add *
+13. git log: Xem lịch sử
+Thay đổi tên
+	git branch -m newname
+	git push origin --delete oldname
+	git push orogin -u newname
+
+
+
